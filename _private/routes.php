@@ -13,6 +13,10 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
 
+	SimpleRouter::get( '/overons', 'WebsiteController@overons' )->name( 'overons' );
+	SimpleRouter::get( '/registreren', 'RegistrationController@registationForm' )->name( 'register.form' );
+	SimpleRouter::post( '/registreren/verwerken', 'RegistrationController@handleRegistrationForm')->name('register.handle');
+
 
 
 
